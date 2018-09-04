@@ -1,5 +1,7 @@
 # graphql-middleware-bugsnag
 
+[![Build Status](https://semaphoreci.com/api/v1/michieldewilde/graphql-middleware-bugsnag/branches/master/badge.svg)](https://semaphoreci.com/michieldewilde/graphql-middleware-bugsnag)
+
 > GraphQL Middleware plugin for Bugsnag.
 
 ## Usage
