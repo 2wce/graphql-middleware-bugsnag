@@ -3,7 +3,7 @@ import { IMiddlewareFunction } from 'graphql-middleware/dist/types'
 
 // Options for graphql-middleware-bugsang
 export interface Options {
-  apiKey: string,
+  apiKey: string
   forwardErrors?: boolean
 }
 
@@ -22,7 +22,7 @@ const normalizeOptions = (options: Options): Options => {
   return {
     apiKey: options.apiKey,
     forwardErrors:
-      options.forwardErrors !== undefined ? options.forwardErrors : false
+      options.forwardErrors !== undefined ? options.forwardErrors : false,
   }
 }
 
