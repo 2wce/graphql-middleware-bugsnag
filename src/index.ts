@@ -1,4 +1,4 @@
-import * as bugsnagClient from 'bugsnag'
+import bugsnag from '@bugsnag/js'
 import { IMiddlewareFunction } from 'graphql-middleware/dist/types'
 
 // Options for graphql-middleware-bugsang
@@ -26,11 +26,11 @@ const normalizeOptions = (options: Options): Options => {
   }
 }
 
-export const bugsnag = (_options: Options): IMiddlewareFunction => {
+export default (_options: Options): IMiddlewareFunction => {
   const options = normalizeOptions(_options)
 
-  // Configure and install Raven
-  bugsnagClient.register(options.apiKey)
+  // Configure bugsnag client
+  const bugsnagClient = bugsnag(options.apiKey)
 
   // Return middleware resolver
   return async (resolve, parent, args, ctx, info) => {
