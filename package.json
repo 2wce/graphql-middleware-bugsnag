@@ -2,7 +2,9 @@
   "name": "graphql-middleware-bugsnag",
   "version": "1.0.0",
   "description": "GraphQL Middleware plugin for Bugsnag",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "typescript": {
@@ -13,8 +15,7 @@
     "build": "rimraf dist && tsc -d",
     "prettier:write": "prettier -c .prettierrc --write src/**/*.*",
     "prelint": "npm run prettier:write",
-    "lint":
-      "tslint --project tsconfig.json {src}/**/*.ts && prettier-check --ignore-path .gitignore {src,.}/{*.ts,*.js}",
+    "lint": "tslint --project tsconfig.json {src}/**/*.ts && prettier-check --ignore-path .gitignore {src,.}/{*.ts,*.js}",
     "test": "npm run lint && npm run build",
     "semantic-release": "semantic-release"
   },
@@ -43,7 +44,7 @@
     "prettier": "1.18.2",
     "prettier-check": "2.0.0",
     "rimraf": "3.0.0",
-    "semantic-release": "15.9.17",
+    "semantic-release": "^17.4.2",
     "tslint": "5.20.0",
     "tslint-config-prettier": "1.18.0",
     "tslint-config-standard": "8.0.1",
